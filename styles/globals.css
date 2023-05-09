@@ -166,6 +166,35 @@ button.btn-logo {
   padding: 0.5rem 1rem;
 }
 
+/* Cards */
+
+.card {
+  padding: 2rem;
+  margin: 1rem 0;
+  background-color: white;
+  border: 1px solid var(--color-gray);
+  border-radius: 8px;
+}
+
+.card footer {
+  display: flex;
+}
+
+.card-img-center {
+  width:20%;
+  display:block;
+  margin:auto;
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+.card-info {
+  color: white;
+  background: var(--color-blue);
+}
+
+/* Loader */
+
 .loader {
   border: 10px solid var(--color-bg); 
   border-top: 10px solid var(--color-blue); 
@@ -179,6 +208,21 @@ button.btn-logo {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* File uploads */
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-snippet {
+  width: 75%;
+    margin-left: auto;
+    background: white;
+    padding: 5px;
+    margin: 5px 0;
+}
+
 
 /* Utilities */
 
