@@ -68,7 +68,7 @@ function CreateNewPost() {
 
     await ref.set(data);
 
-    toast.success('Post created!')
+    toast.success('Article créé!')
 
     // imperative navigation after doc is set
     router.push(`/admin/${slug}`);
@@ -80,11 +80,11 @@ function CreateNewPost() {
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="My Awesome Article!"
+        placeholder="Mon titre d'article"
         className={styles.input}
       />
       <p>
-        <strong>Id:</strong> {slug}
+        <strong>ID:</strong> {slug}
       </p>
       <button type="submit" disabled={!isValid} className="btn-green">
         Créer un article
