@@ -1,6 +1,7 @@
 import styles from '../../styles/Admin.module.css';
 import AuthCheck from '../../components/AuthCheck';
 import { firestore, auth, serverTimestamp } from '../../lib/firebase';
+import ImageUploader from '../../components/ImageUploader';
 
 import { useState } from 'react';
 import { useRouter } from 'next/router';
@@ -78,6 +79,8 @@ function PostForm({ defaultValues, postRef, preview }) {
       )}
 
       <div className={preview ? styles.hidden : styles.controls}>
+
+        <ImageUploader />
   
         <textarea name="content" ref={register({
           maxLength: { value: 20000, message: 'le contenu est trop long is too long' },
@@ -88,7 +91,7 @@ function PostForm({ defaultValues, postRef, preview }) {
         {errors.content && <p className="text-danger">{errors.content.message}</p>}
 
         <fieldset>
-          <input className={styles.checkbox} name="publié" type="checkbox" ref={register} />
+          <input className={styles.checkbox} name="published" type="checkbox" ref={register} />
           <label>Publié</label>
         </fieldset>
 
