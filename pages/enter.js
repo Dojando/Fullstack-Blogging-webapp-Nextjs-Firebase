@@ -28,9 +28,14 @@ function SignInButton() {
   };
 
   return (
-    <button className="btn-google" onClick={signInWithGoogle}>
-      <img src={'/google.png'} />Se connecter avec Google
-    </button>
+    <>
+      <button className="btn-google" onClick={signInWithGoogle}>
+        <img src={'/google.png'} />Se connecter avec Google
+      </button>
+
+      <button onClick={() => auth.signInAnonymously()}>Se connecter anonymement
+      </button>
+    </>
   );
 }
 
@@ -107,7 +112,7 @@ function UsernameForm() {
       <section>
         <h3>Nom d'utilisateur</h3>
         <form onSubmit={onSubmit}>
-          <input name="username" placeholder="myname" value={formValue} onChange={onChange} />
+          <input name="username" placeholder="Mon nom d'utilisateur" value={formValue} onChange={onChange} />
           <UsernameMessage username={formValue} isValid={isValid} loading={loading} />
           <button type="submit" className="btn-green" disabled={!isValid}>
             Choisir
