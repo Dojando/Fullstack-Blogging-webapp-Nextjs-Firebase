@@ -2,6 +2,8 @@
 
 Application de blogging réalisé avec Nextjs, Reactjs et Firebase pour l'authentification et la base de données.
 
+Lien vers le site : https://fullstack-blogging-webapp-nextjs-firebase.vercel.app/
+
 Les concepts vus et implémentés à travers ce projet :
 * Noms d'utilisateur personnalisés Firebase
 * Contenu adapté aux bots (SEO)
